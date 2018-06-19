@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">TestOne</string>
+    <string name="app_name">MyRegApp</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="emailtxt">Enter email address</string>
+    <string name="passtxt">Password</string>
+    <string name="Regtxt">SIGN UP NOW</string>
+    <string name="first_nametxt">First name</string>
+    <string name="last_nametxt">Last Name</string>
+    <string name="phone_numbertxt">phone number</string>
+    <string name="DOBtxt">DOB</string>
+    <string name="usernametxt">username</string>
+    <string name="confirm_passwordtxt">conform password</string>
+
 </resources>

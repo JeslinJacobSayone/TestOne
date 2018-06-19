@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context=".LoginFrag">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/userone"
+        android:layout_gravity="center"/>
+    <EditText
+        android:id="@+id/login_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_view_margin"
+        android:layout_marginRight="@dimen/common_side_margin"
+        android:layout_marginLeft="@dimen/common_side_margin"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/round_border_edit_text"
+        android:hint="@string/emailtxt"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_side_margin"
+        android:layout_marginRight="@dimen/common_side_margin"
+        android:layout_marginLeft="@dimen/common_side_margin"
+        android:background="@drawable/round_border_edit_text"
+        android:hint="@string/passtxt"
+        android:inputType="textPassword"
+        android:padding="10dp" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/top_view_margin"
+        android:background="@drawable/ok"/>
+
+
+</LinearLayout>

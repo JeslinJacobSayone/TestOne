@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="top_view_margin">30dp</dimen>
+    <dimen name="common_side_margin">20dp</dimen>
+    <dimen name="head_one">20dp</dimen>
+
+</resources>
