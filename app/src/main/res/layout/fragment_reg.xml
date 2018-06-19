@@ -25,8 +25,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <EditText
+            android:id="@+id/reg_fname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_fname"
             android:layout_marginLeft="@dimen/common_side_margin"
             android:layout_marginRight="@dimen/common_side_margin"
             android:hint="@string/first_nametxt"
@@ -39,11 +41,14 @@
             android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/reg_lname"
+            android:inputType="textPersonName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/common_side_margin"
             android:layout_marginRight="@dimen/common_side_margin"
-            android:hint="@string/last_nametxt" />
+            android:hint="@string/last_nametxt"
+            android:drawableLeft="@drawable/ic_fname"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -51,9 +56,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+
         <EditText
+            android:id="@+id/reg_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:drawableLeft="@drawable/ic_email"
             android:layout_marginLeft="@dimen/common_side_margin"
             android:layout_marginRight="@dimen/common_side_margin"
             android:hint="@string/emailtxt" />
@@ -65,26 +74,33 @@
             android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/reg_ph"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:drawableLeft="@drawable/ic_phone"
             android:layout_marginLeft="@dimen/common_side_margin"
             android:layout_marginRight="@dimen/common_side_margin"
             android:hint="@string/phone_numbertxt" />
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        <EditText
+        <TextView
             android:id="@+id/dob"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
             android:layout_marginLeft="@dimen/common_side_margin"
             android:layout_marginRight="@dimen/common_side_margin"
-            android:hint="@string/DOBtxt" />
-        </android.support.design.widget.TextInputLayout>
+            android:drawableLeft="@drawable/icon_dob"
+            android:onClick="pickdate"
+            android:text="@string/DOBtxt"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            tools:ignore="OnClick" />
+
+
 
         <android.support.design.widget.TextInputLayout
 
@@ -92,8 +108,11 @@
             android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/reg_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:drawableLeft="@drawable/ic_username"
             android:layout_marginLeft="@dimen/common_side_margin"
             android:layout_marginRight="@dimen/common_side_margin"
             android:hint="@string/usernametxt" />
@@ -105,11 +124,14 @@
             android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/reg_pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPassword"
             android:layout_marginLeft="@dimen/common_side_margin"
             android:layout_marginRight="@dimen/common_side_margin"
-            android:hint="@string/passtxt" />
+            android:hint="@string/passtxt"
+            android:drawableLeft="@drawable/ic_pass"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -118,8 +140,11 @@
             android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/reg_conf_pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/ic_pass"
             android:layout_marginLeft="@dimen/common_side_margin"
             android:layout_marginRight="@dimen/common_side_margin"
             android:hint="@string/confirm_passwordtxt" />
@@ -127,6 +152,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <ImageView
+            android:id="@+id/submit_register"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"

@@ -9,7 +9,7 @@
     <string name="first_nametxt">First name</string>
     <string name="last_nametxt">Last Name</string>
     <string name="phone_numbertxt">phone number</string>
-    <string name="DOBtxt">DOB</string>
+    <string name="DOBtxt">click to select DOB</string>
     <string name="usernametxt">username</string>
     <string name="confirm_passwordtxt">conform password</string>
 
