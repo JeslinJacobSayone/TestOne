@@ -1,6 +1,7 @@
 package com.example.sayone.testone;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 public class LoginFrag extends Fragment {
 
@@ -32,11 +35,44 @@ public class LoginFrag extends Fragment {
 
     }
 
+    EditText usertxt , passwordtxt;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false);
+        View view= inflater.inflate(R.layout.fragment_login, container, false);
+        ImageView oksubmit= view.findViewById(R.id.img_ok);
+        usertxt = view.findViewById(R.id.login_email);
+        passwordtxt = view.findViewById(R.id.login_password);
+
+        oksubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ClickAnims anims = new ClickAnims(getContext());
+                anims.animate(v);
+                String userSTR , passSRT;
+                Person person = new Person();
+                String peremail = person.getEmail();
+                String perpass= person.getPass();
+                userSTR=usertxt.getText().toString().trim();
+                passSRT=passwordtxt.getText().toString().trim();
+
+                if((userSTR.equals(person.getEmail()))&&(passSRT.equals(person.getPass()))){
+
+                    Toast.makeText(getContext(), "login success", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getContext(),HomePage.class);
+                    startActivity(intent);
+
+                }else {
+                    Toast.makeText(getContext(), "login fail", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -17,6 +17,9 @@ public class DialogDate extends AppCompatActivity {
     }
 
     public void onsubmit(View view){
+
+        ClickAnims anims = new ClickAnims(getApplicationContext());
+        anims.animate(view);
         DatePicker datePicker = findViewById(R.id.dobpicker);
         String DOB= datePicker.getDayOfMonth()+"-"+datePicker.getMonth()+"-"+datePicker.getYear();
         Intent intent = new Intent();

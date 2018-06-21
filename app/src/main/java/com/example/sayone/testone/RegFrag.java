@@ -67,6 +67,8 @@ public class RegFrag extends Fragment{
             @Override
             public void onClick(View v) {
 
+                ClickAnims anims = new ClickAnims(getContext());
+                anims.animate(v);
                 int validation_flag=1;
                 String fnameStr, lnameStr , emailStr , phStr , userStr , passStr , con_passStr , dobStr;
 
@@ -122,6 +124,10 @@ public class RegFrag extends Fragment{
 
                     user.setError("username should contain numbers and alphabets",error);
                 }
+                if(dobStr.equals("click to select DOB")){
+                    validation_flag=0;
+                    Toast.makeText(getContext(), "please select you DOB", Toast.LENGTH_SHORT).show();
+                }
                 if(!passStr.equals(con_passStr)){
                     validation_flag=0;
                     Toast.makeText(getContext(), "passwords don't match", Toast.LENGTH_SHORT).show();
@@ -129,8 +135,8 @@ public class RegFrag extends Fragment{
 
                 if(validation_flag==1){
                     Person person = new Person();
-                    person.setperson(fnameStr,lnameStr,emailStr,phStr,userStr,passStr);
-                    Toast.makeText(getContext(), " trying something : "+person.getFname(), Toast.LENGTH_SHORT).show();
+                    person.setperson(fnameStr,lnameStr,emailStr,phStr,userStr,passStr,dobStr);
+                    Toast.makeText(getContext(), " registration compleated : "+person.getFname(), Toast.LENGTH_SHORT).show();
                 }
 
 
