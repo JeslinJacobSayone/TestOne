@@ -54,8 +54,7 @@ public class LoginFrag extends Fragment {
                 anims.animate(v);
                 String userSTR , passSRT;
                 Person person = new Person();
-                String peremail = person.getEmail();
-                String perpass= person.getPass();
+           
                 userSTR=usertxt.getText().toString().trim();
                 passSRT=passwordtxt.getText().toString().trim();
 
