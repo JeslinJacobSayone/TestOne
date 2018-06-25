@@ -1,85 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".HomePage">
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/userone"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/top_view_margin"/>
-
-    <TextView
-        android:id="@+id/home_name"
+    <android.support.design.widget.TabLayout
+        android:id="@+id/hometab"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/top_view_margin"
-        android:text="demo name"
-        android:gravity="center"
-        android:layout_marginLeft="@dimen/common_side_margin"
-        android:layout_marginRight="@dimen/common_side_margin"/>
+        android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/home_email"
-        android:textColor="@color/black"
-        android:textStyle="bold"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/home_view_pager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/common_side_margin"
-        android:text="demo name"
-        android:gravity="center"
-        android:layout_marginLeft="@dimen/common_side_margin"
-        android:layout_marginRight="@dimen/common_side_margin"/>
+        android:layout_height="match_parent">
 
+    </android.support.v4.view.ViewPager>
 
-    <TextView
-        android:id="@+id/home_phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/common_side_margin"
-        android:text="demo name"
-        android:gravity="center"
-        android:layout_marginLeft="@dimen/common_side_margin"
-        android:layout_marginRight="@dimen/common_side_margin"/>
-
-
-    <TextView
-        android:id="@+id/home_dob"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/common_side_margin"
-        android:text="demo name"
-        android:gravity="center"
-        android:layout_marginLeft="@dimen/common_side_margin"
-        android:layout_marginRight="@dimen/common_side_margin"/>
-
-
-    <TextView
-        android:id="@+id/home_username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/common_side_margin"
-        android:text="demo name"
-        android:gravity="center"
-        android:layout_marginLeft="@dimen/common_side_margin"
-        android:layout_marginRight="@dimen/common_side_margin"/>
-
-
-    <TextView
-        android:id="@+id/home_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/common_side_margin"
-        android:text="demo name"
-        android:gravity="center"
-        android:layout_marginLeft="@dimen/common_side_margin"
-        android:layout_marginRight="@dimen/common_side_margin"/>
-
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

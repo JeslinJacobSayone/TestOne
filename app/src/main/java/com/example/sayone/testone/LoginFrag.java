@@ -61,7 +61,7 @@ public class LoginFrag extends Fragment {
                 if((userSTR.equals(person.getEmail()))&&(passSRT.equals(person.getPass()))){
 
                     Toast.makeText(getContext(), "login success", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getContext(),HomePage.class);
+                    Intent intent = new Intent(getContext(),ProfileView.class);
                     startActivity(intent);
 
                 }else {

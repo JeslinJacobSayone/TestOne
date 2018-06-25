@@ -3,6 +3,7 @@
     package="com.example.sayone.testone">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,6 +21,7 @@
         <activity
             android:name=".DialogDate"
             android:theme="@style/customdate" />
+        <activity android:name=".ProfileView" />
         <activity android:name=".HomePage"></activity>
     </application>
 

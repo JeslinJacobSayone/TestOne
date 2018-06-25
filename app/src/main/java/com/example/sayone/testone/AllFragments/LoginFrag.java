@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.sayone.testone.AdaptersAndClasses.ClickAnims;
-import com.example.sayone.testone.HomePage;
+import com.example.sayone.testone.ProfileView;
 import com.example.sayone.testone.AdaptersAndClasses.Person;
 import com.example.sayone.testone.R;
 
@@ -66,7 +66,7 @@ public class LoginFrag extends Fragment {
                 if((userSTR.equals(person.getEmail()))&&(passSRT.equals(person.getPass()))){
 
                     Toast.makeText(getContext(), "login success", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getContext(),HomePage.class);
+                    Intent intent = new Intent(getContext(),ProfileView.class);
                     startActivity(intent);
 
                 }else {
