@@ -1,11 +1,10 @@
-package com.example.sayone.testone;
+package com.example.sayone.testone.AllFragments;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,10 +13,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.sayone.testone.AdaptersAndClasses.ClickAnims;
+import com.example.sayone.testone.AdaptersAndClasses.Person;
+import com.example.sayone.testone.R;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import static com.example.sayone.testone.R.drawable.ic_error;
 
 public class RegFrag extends Fragment{
 

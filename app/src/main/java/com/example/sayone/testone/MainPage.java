@@ -14,8 +14,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.sayone.testone.AllFragments.LoginFrag;
+import com.example.sayone.testone.AllFragments.OnFragmentInteractionListener;
+import com.example.sayone.testone.AllFragments.RegFrag;
 
-public class MainPage extends AppCompatActivity implements OnFragmentInteractionListener{
+
+public class MainPage extends AppCompatActivity implements OnFragmentInteractionListener {
 
 
     private final String[] PAGE_TITLES = new String[] {
