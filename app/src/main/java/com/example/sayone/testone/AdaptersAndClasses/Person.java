@@ -1,4 +1,4 @@
-package com.example.sayone.testone;
+package com.example.sayone.testone.AdaptersAndClasses;
 
 public class Person {
 

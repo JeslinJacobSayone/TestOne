@@ -1,4 +1,4 @@
-package com.example.sayone.testone;
+package com.example.sayone.testone.AllFragments;
 
 import android.net.Uri;
 

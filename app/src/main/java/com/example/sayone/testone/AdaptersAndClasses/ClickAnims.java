@@ -1,4 +1,4 @@
-package com.example.sayone.testone;
+package com.example.sayone.testone.AdaptersAndClasses;
 
 import android.content.Context;
 import android.os.Vibrator;
@@ -6,11 +6,13 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import com.example.sayone.testone.R;
+
 public class ClickAnims {
 
     Context context;
 
-    ClickAnims(Context context){
+    public ClickAnims(Context context){
         this.context=context;
     }
 

@@ -10,6 +10,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
+import com.example.sayone.testone.AdaptersAndClasses.ClickAnims;
+import com.example.sayone.testone.AdaptersAndClasses.Person;
+
 public class HomePage extends AppCompatActivity {
 
     @Override
