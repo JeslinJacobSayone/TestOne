@@ -3,6 +3,7 @@
     package="com.example.sayone.testone">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,18 +12,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainPage">
+        <activity android:name=".app.login.registration.FirstPageActivity"></activity>
+        <activity
+            android:name=".app.login.registration.DialogDate"
+            android:theme="@style/customdate" />
+        <activity android:name=".app.settings.ProfileViewActivity" />
+        <activity android:name=".app.homepage.HomePageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".DialogDate"
-            android:theme="@style/customdate" />
-        <activity android:name=".ProfileView" />
-        <activity android:name=".HomePage"></activity>
+        <activity android:name=".app.homepage.WebActivity" />
+        <activity android:name=".app.settings.SettingsActivity"></activity>
     </application>
 
 </manifest>

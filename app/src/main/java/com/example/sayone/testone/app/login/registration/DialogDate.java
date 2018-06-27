@@ -1,4 +1,4 @@
-package com.example.sayone.testone;
+package com.example.sayone.testone.app.login.registration;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
 
-import com.example.sayone.testone.AdaptersAndClasses.ClickAnims;
+import com.example.sayone.testone.R;
+import com.example.sayone.testone.model.Utilities;
 
 public class DialogDate extends AppCompatActivity {
 
@@ -19,7 +20,7 @@ public class DialogDate extends AppCompatActivity {
 
     public void onsubmit(View view){
 
-        ClickAnims anims = new ClickAnims(getApplicationContext());
+        Utilities anims = new Utilities(getApplicationContext());
         anims.animate(view);
         DatePicker datePicker = findViewById(R.id.dobpicker);
         String DOB= datePicker.getDayOfMonth()+"-"+datePicker.getMonth()+"-"+datePicker.getYear();

@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DialogDate">
+    tools:context=".app.login.registration.DialogDate">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
-        app:title="Select DOB"
+        app:title="@string/select_dob"
         android:textAlignment="center"
         android:layout_height="wrap_content">
 
@@ -24,6 +24,6 @@
         android:onClick="onsubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Choose date"
+        android:text="@string/choose_date"
        />
 </LinearLayout>

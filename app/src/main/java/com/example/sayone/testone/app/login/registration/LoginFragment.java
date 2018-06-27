@@ -1,8 +1,6 @@
-package com.example.sayone.testone.AllFragments;
+package com.example.sayone.testone.app.login.registration;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,32 +10,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.sayone.testone.AdaptersAndClasses.ClickAnims;
-import com.example.sayone.testone.ProfileView;
-import com.example.sayone.testone.AdaptersAndClasses.Person;
+import com.example.sayone.testone.app.homepage.HomePageActivity;
+import com.example.sayone.testone.model.Utilities;
+import com.example.sayone.testone.model.Person;
 import com.example.sayone.testone.R;
 
-public class LoginFrag extends Fragment {
+public class LoginFragment extends Fragment {
 
 
-    public LoginFrag() {
-        // Required empty public constructor
-    }
-
-    // TODO: Rename and change types and number of parameters
-    public static LoginFrag newInstance(String param1, String param2) {
-        LoginFrag fragment = new LoginFrag();
-
-        return fragment;
-    }
-
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-
-
+    public LoginFragment() {   // Required empty public constructor
     }
 
     EditText usertxt , passwordtxt;
@@ -55,7 +36,7 @@ public class LoginFrag extends Fragment {
             @Override
             public void onClick(View v) {
 
-                ClickAnims anims = new ClickAnims(getContext());
+                Utilities anims = new Utilities(getContext());
                 anims.animate(v);
                 String userSTR , passSRT;
                 Person person = new Person();
@@ -66,7 +47,7 @@ public class LoginFrag extends Fragment {
                 if((userSTR.equals(person.getEmail()))&&(passSRT.equals(person.getPass()))){
 
                     Toast.makeText(getContext(), "login success", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getContext(),ProfileView.class);
+                    Intent intent = new Intent(getContext(),HomePageActivity.class);
                     startActivity(intent);
 
                 }else {
@@ -79,22 +60,6 @@ public class LoginFrag extends Fragment {
         return view;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-
-    }
 
 
 

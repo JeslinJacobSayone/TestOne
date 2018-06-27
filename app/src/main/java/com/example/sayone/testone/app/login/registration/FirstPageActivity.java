@@ -1,25 +1,20 @@
-package com.example.sayone.testone;
+package com.example.sayone.testone.app.login.registration;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.sayone.testone.AllFragments.LoginFrag;
-import com.example.sayone.testone.AllFragments.OnFragmentInteractionListener;
-import com.example.sayone.testone.AllFragments.RegFrag;
+import com.example.sayone.testone.R;
 
 
-public class MainPage extends AppCompatActivity implements OnFragmentInteractionListener {
+public class FirstPageActivity extends AppCompatActivity {
 
 
     private final String[] PAGE_TITLES = new String[] {
@@ -28,26 +23,27 @@ public class MainPage extends AppCompatActivity implements OnFragmentInteraction
     };
 
     private final Fragment[] PAGES = new Fragment[] {
-            new LoginFrag(),
-            new RegFrag()
+            new LoginFragment(),
+            new RegistrationFragment()
     };
 
-    ViewPager viewPager;
-    EditText dob;
+    ViewPager mViewPager;
+    ImageView mSettings;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
-        getSupportActionBar().hide();
 
-        viewPager = findViewById(R.id.viewPager);
-        viewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
+        mViewPager = findViewById(R.id.viewPager);
+
+        mViewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager(),PAGES));
         TabLayout tabLayout = findViewById(R.id.tab);
-        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setupWithViewPager(mViewPager);
         for(int i=0;i<PAGE_TITLES.length;i++){
 
             tabLayout.getTabAt(i).setText(PAGE_TITLES[i]);
         }
+
 
 
     }
@@ -55,6 +51,8 @@ public class MainPage extends AppCompatActivity implements OnFragmentInteraction
         Intent intent = new Intent(this,DialogDate.class);
         startActivityForResult(intent, 1);
     }
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -67,31 +65,6 @@ public class MainPage extends AppCompatActivity implements OnFragmentInteraction
             }
         }
     }
-/*    public void loginclick(View v){
-        Person person = new Person();
-    }*/
-
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
-    }
 
 
-
-    class MyPagerAdapter extends FragmentPagerAdapter {
-
-        public MyPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            return PAGES[position];
-        }
-
-        @Override
-        public int getCount() {
-            return PAGES.length;
-        }
-    }
 }

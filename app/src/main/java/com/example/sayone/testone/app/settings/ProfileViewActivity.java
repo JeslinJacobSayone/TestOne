@@ -1,4 +1,4 @@
-package com.example.sayone.testone;
+package com.example.sayone.testone.app.settings;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -10,10 +10,11 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
-import com.example.sayone.testone.AdaptersAndClasses.ClickAnims;
-import com.example.sayone.testone.AdaptersAndClasses.Person;
+import com.example.sayone.testone.R;
+import com.example.sayone.testone.model.Utilities;
+import com.example.sayone.testone.model.Person;
 
-public class ProfileView extends AppCompatActivity {
+public class ProfileViewActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +60,7 @@ public class ProfileView extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                ClickAnims anims = new ClickAnims(getApplicationContext());
+                Utilities anims = new Utilities(getApplicationContext());
                 anims.animate(v);
 
                 Intent intent = new Intent(Intent.ACTION_DIAL);

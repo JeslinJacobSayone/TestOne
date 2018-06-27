@@ -1,8 +1,6 @@
-package com.example.sayone.testone.AllFragments;
+package com.example.sayone.testone.app.login.registration;
 
-import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,37 +11,21 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.sayone.testone.AdaptersAndClasses.ClickAnims;
-import com.example.sayone.testone.AdaptersAndClasses.Person;
+import com.example.sayone.testone.model.Utilities;
+import com.example.sayone.testone.model.Person;
 import com.example.sayone.testone.R;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class RegFrag extends Fragment{
+public class RegistrationFragment extends Fragment{
 
 
 
-    private OnFragmentInteractionListener mListener;
-
-    public RegFrag() {
+    public RegistrationFragment() {
         // Required empty public constructor
     }
 
-    // TODO: Rename and change types and number of parameters
-    public static RegFrag newInstance(String param1, String param2) {
-        RegFrag fragment = new RegFrag();
-        Bundle args = new Bundle();
-
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -68,7 +50,7 @@ public class RegFrag extends Fragment{
             @Override
             public void onClick(View v) {
 
-                ClickAnims anims = new ClickAnims(getContext());
+                Utilities anims = new Utilities(getContext());
                 anims.animate(v);
                 int validation_flag=1;
                 String fnameStr, lnameStr , emailStr , phStr , userStr , passStr , con_passStr , dobStr;
@@ -117,7 +99,7 @@ public class RegFrag extends Fragment{
                 if(!phMatch.matches()){
                     validation_flag=0;
 
-                    ph.setError("invalid phone",error);
+                    ph.setError("invaliphd phone",error);
 
                 }
                 if(!userMatch.matches()){
@@ -149,29 +131,6 @@ public class RegFrag extends Fragment{
         return  view;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
 
 
 

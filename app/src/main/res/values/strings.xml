@@ -12,5 +12,51 @@
     <string name="DOBtxt">click to select DOB</string>
     <string name="usernametxt">username</string>
     <string name="confirm_passwordtxt">conform password</string>
+    <string name="home_title">Home Page</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="upload_summary">upload the video when wifi is available</string>
+    <string name="upload_quality">Upload_quality</string>
+    <string name="quality_summary">Specify video quality for uploads</string>
+    <string name="notification_header">Notification</string>
+    <string name="message_notification">New message notification</string>
+    <string name="ringtone">Ringtone</string>
+    <string name="about_txt">Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers </string>
+    <string name="choose_date">Choose date</string>
+    <string name="select_dob">Select DOB</string>
+    <string name="demo_name">demo name</string>
+    <string name="faq_summary">View frequently asked question</string>
+    <string name="faq_title">FAQ</string>
+    <string name="feedback_summary">Got any queries ? we are happy to help.</string>
+    <string name="feedback_title">Send Feedback</string>
+    <string name="version_summary">3.5</string>
+    <string name="version_title">Version</string>
+    <string name="vibrate_title">Vibrate</string>
+    <string name="vibrate_summary">vibrate on new notification</string>
+    <string name="about_title">About</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="terms_and_conditions">Terms and conditions</string>
+    <string name="terms_web_page">https://www.website.com/terms-and-conditions/</string>
+    <string name="privacy_web">https://privacypolicies.com/</string>
+    <string name="faq_web">https://www.microsoft.com/en-in/software-download/faq</string>
+
+    <string-array name="default_storage">
+        <item>SD card</item>
+        <item>Internal storage</item>
+    </string-array>
+
+    <string-array name="upload_quality">
+        <item>120p</item>
+        <item>360p</item>
+        <item>480p</item>
+    </string-array>
+
+    <string-array name="ringtones">
+        <item>RingtoneOno</item>
+        <item>Ringtonetwo</item>
+        <item>RingtoneThree</item>
+        <item>RingtoneFour</item>
+        <item>RingtoneFive</item>
+        <item>RingtoneSix</item>
+    </string-array>
 
 </resources>

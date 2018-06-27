@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
-    tools:context=".AllFragments.LoginFrag">
+    tools:context=".app.login.registration.LoginFragment">
 
     <LinearLayout
         android:orientation="vertical"
@@ -43,8 +43,8 @@
 
     <ImageView
         android:id="@+id/img_ok"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="@dimen/ok_img_width"
+        android:layout_height="@dimen/ok_img_width"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/top_view_margin"
         android:background="@drawable/ok"/>
