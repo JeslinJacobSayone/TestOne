@@ -15,11 +15,11 @@ import android.view.MenuItem;
 
 import com.example.sayone.testone.R;
 import com.example.sayone.testone.app.settings.SettingsActivity;
-import com.example.sayone.testone.app.login.registration.MyPagerAdapter;
+import com.example.sayone.testone.app.login.registration.TabSwipePagerAdapter;
 
 public class HomePageActivity extends AppCompatActivity {
 
-    ViewPager mViewPager;
+    private ViewPager mViewPager;
 
     private final String[] PAGE_TITLES = new String[] {
             "Grid Images",
@@ -45,7 +45,7 @@ public class HomePageActivity extends AppCompatActivity {
         toolbar.setOverflowIcon(drawable);
 
         mViewPager = findViewById(R.id.home_view_pager);
-        mViewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager(),PAGES));
+        mViewPager.setAdapter(new TabSwipePagerAdapter(getSupportFragmentManager(),PAGES));
         TabLayout tabLayout = findViewById(R.id.home_tab);
         tabLayout.setupWithViewPager(mViewPager);
         for(int i=0;i<PAGE_TITLES.length;i++){

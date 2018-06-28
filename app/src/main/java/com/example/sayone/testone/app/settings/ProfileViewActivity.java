@@ -50,8 +50,8 @@ public class ProfileViewActivity extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("plain/text");
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[] { person.getEmail() });
-                intent.putExtra(Intent.EXTRA_SUBJECT, "simple email");
-                intent.putExtra(Intent.EXTRA_TEXT, "this is a simple mail body , make apropreate changes here");
+                intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.mail_sub));
+                intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.mail_content));
                 startActivity(Intent.createChooser(intent, "SimpleMail"));
             }
         });

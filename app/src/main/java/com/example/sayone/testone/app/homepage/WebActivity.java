@@ -9,14 +9,14 @@ import com.example.sayone.testone.R;
 
 public class WebActivity extends AppCompatActivity {
 
-    WebView webView;
+    private WebView mWebView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web);
-        webView = (WebView)findViewById(R.id.main_web_view);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("http://www.google.com");
-        webView.setWebViewClient(new WebViewClient());
+        mWebView = (WebView)findViewById(R.id.main_web_view);
+        mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.loadUrl("http://www.google.com");
+        mWebView.setWebViewClient(new WebViewClient());
     }
 }

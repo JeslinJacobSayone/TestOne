@@ -17,18 +17,18 @@ import com.example.sayone.testone.R;
 public class FirstPageActivity extends AppCompatActivity {
 
 
-    private final String[] PAGE_TITLES = new String[] {
+    private final String[] mPagetitles = new String[] {
             "Login",
             "Register"
     };
 
-    private final Fragment[] PAGES = new Fragment[] {
+    private final Fragment[] mFragments = new Fragment[] {
             new LoginFragment(),
             new RegistrationFragment()
     };
 
     ViewPager mViewPager;
-    ImageView mSettings;
+   
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,12 +36,12 @@ public class FirstPageActivity extends AppCompatActivity {
 
         mViewPager = findViewById(R.id.viewPager);
 
-        mViewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager(),PAGES));
+        mViewPager.setAdapter(new TabSwipePagerAdapter(getSupportFragmentManager(),mFragments));
         TabLayout tabLayout = findViewById(R.id.tab);
         tabLayout.setupWithViewPager(mViewPager);
-        for(int i=0;i<PAGE_TITLES.length;i++){
+        for(int i=0;i<mPagetitles.length;i++){
 
-            tabLayout.getTabAt(i).setText(PAGE_TITLES[i]);
+            tabLayout.getTabAt(i).setText(mPagetitles[i]);
         }
 
 

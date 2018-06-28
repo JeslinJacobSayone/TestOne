@@ -16,7 +16,7 @@ import java.util.List;
 
 public class ListViewFragment extends Fragment {
 
-    List<ImageListModel> mitemList;
+    private List<ImageListModel> mitemList;
     public ListViewFragment() {
         // Required empty public constructor
     }

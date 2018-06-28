@@ -38,6 +38,8 @@
     <string name="terms_web_page">https://www.website.com/terms-and-conditions/</string>
     <string name="privacy_web">https://privacypolicies.com/</string>
     <string name="faq_web">https://www.microsoft.com/en-in/software-download/faq</string>
+    <string name="mail_sub">simple email</string>
+    <string name="mail_content">this is a simple mail body , make apropreate changes here</string>
 
     <string-array name="default_storage">
         <item>SD card</item>

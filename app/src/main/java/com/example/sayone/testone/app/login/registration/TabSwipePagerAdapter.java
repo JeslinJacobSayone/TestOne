@@ -4,22 +4,22 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-public class MyPagerAdapter extends FragmentPagerAdapter {
+public class TabSwipePagerAdapter extends android.support.v4.app.FragmentPagerAdapter {
 
-    private Fragment[] PAGES;
+    private Fragment[] mFragments;
 
-    public MyPagerAdapter(FragmentManager fm,Fragment[] PAGES) {
+    public TabSwipePagerAdapter(FragmentManager fm, Fragment[] fragmentArray) {
         super(fm);
-        this.PAGES=PAGES;
+        this.mFragments=fragmentArray;
     }
 
     @Override
     public Fragment getItem(int position) {
-        return PAGES[position];
+        return mFragments[position];
     }
 
     @Override
     public int getCount() {
-        return PAGES.length;
+        return mFragments.length;
     }
 }

@@ -22,11 +22,11 @@ import java.util.List;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ImageViewHolder>{
 
     private List<ImageListModel> mImageListModel;
-    RecyclerViewAdapter recyclerViewAdapter=this;
-    private Context mcontext;
+    private RecyclerViewAdapter mRecyclerViewAdapter=this;
+    private Context mContext;
     public RecyclerViewAdapter(List<ImageListModel> imageListModel, Context context){
         mImageListModel=imageListModel;
-        mcontext=context;
+        mContext=context;
     }
     @NonNull
     @Override
@@ -49,8 +49,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
        holder.mCv.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Intent intent = new Intent(mcontext, WebActivity.class);
-               mcontext.startActivity(intent);
+               Intent intent = new Intent(mContext, WebActivity.class);
+               mContext.startActivity(intent);
            }
        });
 
@@ -58,7 +58,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
            @Override
            public void onClick(View v) {
 
-               PopupMenu menu = new PopupMenu(mcontext,v);
+               PopupMenu menu = new PopupMenu(mContext,v);
                menu.getMenuInflater().inflate(R.menu.menu,menu.getMenu());
                menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                    @Override
@@ -67,7 +67,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
 
                        removeData(position);
-                       recyclerViewAdapter.notifyDataSetChanged();
+                       mRecyclerViewAdapter.notifyDataSetChanged();
                        Toast.makeText(holder.mCv.getContext(), "deleted", Toast.LENGTH_SHORT).show();
                       // Toast.makeText(mContext, "deleted position : "+position, Toast.LENGTH_SHORT).show();
                        return false;
