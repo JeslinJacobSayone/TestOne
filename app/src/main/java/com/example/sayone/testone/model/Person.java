@@ -2,43 +2,43 @@ package com.example.sayone.testone.model;
 
 public class Person {
 
-    public  static String fname, lname, email, ph, user, pass , dob;
+    private String mFname, mLastName, mEmail, mPhone, mUser, mPass , mDob;
 
-    public void  setperson(String fname, String lname, String email, String ph, String user, String pass , String dob) {
-        this.fname = fname;
-        this.lname = lname;
-        this.email = email;
-        this.ph = ph;
-        this.user = user;
-        this.pass = pass;
-        this.dob=dob;
+    public void  setperson(String mFname, String mLastName, String mEmail, String mPhone, String mUser, String mPass , String mDob) {
+        this.mFname = mFname;
+        this.mLastName = mLastName;
+        this.mEmail = mEmail;
+        this.mPhone = mPhone;
+        this.mUser = mUser;
+        this.mPass = mPass;
+        this.mDob=mDob;
     }
 
     public String getFname() {
-        return fname;
+        return mFname;
     }
 
     public String getLname() {
-        return lname;
+        return mLastName;
     }
 
     public String getEmail() {
-        return email;
+        return mEmail;
     }
 
     public String getPh() {
-        return ph;
+        return mPhone;
     }
 
     public String getUser() {
-        return user;
+        return mUser;
     }
 
     public String getPass() {
-        return pass;
+        return mPass;
     }
 
     public String getDob() {
-        return dob;
+        return mDob;
     }
 }

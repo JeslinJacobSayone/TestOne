@@ -19,6 +19,8 @@ import com.example.sayone.testone.app.login.registration.MyPagerAdapter;
 
 public class HomePageActivity extends AppCompatActivity {
 
+    ViewPager mViewPager;
+
     private final String[] PAGE_TITLES = new String[] {
             "Grid Images",
             "List Images"
@@ -29,7 +31,7 @@ public class HomePageActivity extends AppCompatActivity {
             new ListViewFragment()
     };
 
-    ViewPager mViewPager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
