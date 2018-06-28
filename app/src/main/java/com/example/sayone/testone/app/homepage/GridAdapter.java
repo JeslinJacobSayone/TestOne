@@ -90,12 +90,12 @@ public class GridAdapter extends ArrayAdapter {
             imageView = (ImageView) convertView.findViewById(R.id.gridimg);
             menue_img = (ImageView) convertView.findViewById(R.id.menue_icon);
 
-            final ViewHolderClass holder = new ViewHolderClass(textView, imageView, menue_img);
+            final ViewHolder holder = new ViewHolder(textView, imageView, menue_img);
             convertView.setTag(holder);
 
         }
 
-        final ViewHolderClass holder = (ViewHolderClass) convertView.getTag();
+        final ViewHolder holder = (ViewHolder) convertView.getTag();
         holder.textView.setText(mNamesArray.get(position));
         holder.imageView.setImageResource(mThumbIds.get(position));
         holder.imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
@@ -129,12 +129,12 @@ public class GridAdapter extends ArrayAdapter {
     }
 
     // creating a view holder for the grid elements
-    private class ViewHolderClass {
+    private class ViewHolder {
         private final TextView textView;
         private final ImageView imageView;
         private final ImageView menue_img;
 
-        public ViewHolderClass(TextView textView, ImageView imageView, ImageView menue_img) {
+        public ViewHolder(TextView textView, ImageView imageView, ImageView menue_img) {
             this.textView = textView;
             this.imageView = imageView;
             this.menue_img = menue_img;

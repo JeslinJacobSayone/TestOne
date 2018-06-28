@@ -24,7 +24,7 @@ public class GridViewFragment extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_grid_view, container, false);
         GridView gridview = (GridView) view.findViewById(R.id.gridview);
-//        GridImageAdapter adapter = new GridImageAdapter(getContext());
+
         GridAdapter adapter = new GridAdapter(getContext());
 
         gridview.setAdapter(adapter);

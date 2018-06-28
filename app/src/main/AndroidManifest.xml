@@ -14,7 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".app.login.registration.FirstPageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity
@@ -22,11 +26,7 @@
             android:theme="@style/customdate" />
         <activity android:name=".app.settings.ProfileViewActivity" />
         <activity android:name=".app.homepage.HomePageActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".app.homepage.WebActivity" />
         <activity android:name=".app.settings.SettingsActivity"></activity>

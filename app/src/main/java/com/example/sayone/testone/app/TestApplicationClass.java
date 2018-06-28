@@ -29,11 +29,13 @@ public class TestApplicationClass extends Application {
         Toast.makeText(this, "hai " + fNameStr, Toast.LENGTH_SHORT).show();
     }
 
-    public String getPersonEmail(){
-       return mPerson.getEmail();
-    }
-    public String getPersonPass(){
-        return mPerson.getPass();
-    }
+    public Person getCurrentUser(){return mPerson;}
+
+//    public String getPersonEmail(){
+//       return mPerson.getEmail();
+//    }
+//    public String getPersonPass(){
+//        return mPerson.getPass();
+//    }
 }
 
